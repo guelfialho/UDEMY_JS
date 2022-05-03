@@ -1,8 +1,12 @@
-johnMass = 85; // kg
-johnHeight = 1.66; // meters
+// johnMass = 85; // kg
+// johnHeight = 1.76; // meters
+// marksMass = 95; //kg
+// marksHeight = 1.88; // meters
 
-marksMass = 95; //kg
-marksHeight = 1.88; // meters
+johnMass = 92; // kg
+johnHeight = 1.95; // meters
+marksMass = 78; //kg
+marksHeight = 1.69; // meters
 
 johnBMI = johnMass / (johnHeight * johnHeight);
 marksBMI = marksMass / (marksHeight * marksHeight);
