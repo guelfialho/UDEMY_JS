@@ -2,24 +2,20 @@
 
 const temperatures = [3,-2,9,-1,'error',9,13,17,15,-6,9,5];
 
-
-
-
+function calcTemperatureAmplitude(array) {
 
 let minimumTemperature
 let maximumTemperature
 let aux
-let aux2
 
-for(let i = 0; i < temperatures.length; i++) {
-    if(typeof(temperatures[i]) === 'number') {
+for(let i = 0; i < array.length; i++) {
+    if(typeof(array[i]) === 'number') {
         if(i === 0) {
-            minimumTemperature = temperatures[i]
-            maximumTemperature = temperatures[i]
+            minimumTemperature = array[i]
+            maximumTemperature = array[i]
             continue
         } 
-        aux = temperatures[i]
-        aux2 = temperatures[i]
+        aux = array[i]
         
         if (aux > maximumTemperature) {
             maximumTemperature = aux
@@ -32,10 +28,11 @@ for(let i = 0; i < temperatures.length; i++) {
     }
 }
 
-console.log(maximumTemperature)
-console.log(minimumTemperature)
-
 const amplitude = Math.abs(minimumTemperature - maximumTemperature)
+return (amplitude)
+}
 
-console.log(amplitude)
+
+console.log(calcTemperatureAmplitude(temperatures))
+
 
