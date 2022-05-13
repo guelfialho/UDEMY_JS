@@ -1,6 +1,6 @@
 'use strict'
 
-const temperatures = [3,-2,9,-1,'error',9,13,17,15,-6,9,5];
+const temperatures = [3,-2,9,-1,'error',9,13,17,15,-6,9];
 
 function calcTemperatureAmplitude(array) {
 
