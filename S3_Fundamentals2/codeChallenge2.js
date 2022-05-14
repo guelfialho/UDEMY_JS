@@ -1,6 +1,6 @@
 'use strict';
 
-let bills = [100, 1000, 10];
+let bills = [125, 555, 44];
 let finalBills = [];
 
 const calcTip = function (bill) {
