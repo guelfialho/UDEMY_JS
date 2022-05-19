@@ -7,7 +7,7 @@ const flights =
 // Data needed for first part of the section
 const restaurant = {
   name: 'Classico Italiano',
-  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  adress: 'Via Angelo Tavanti 23, Firenze, Italy',
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
@@ -27,3 +27,24 @@ const restaurant = {
     },
   },
 };
+
+// destructurin an Array
+// let [a, b] = [5, 6, 7];
+// console.log(a, b);
+
+// I can junp to the next index putting a blank space between commas
+// indexes: 0,1, ,3
+// let [x, y, , z] = restaurant.categories;
+// console.log(x, y, z);
+// I can destructurin an Array inside a destructuring:
+// let array = ['miguel', 1998, ['Mirela', 'Beatriz']];
+// const [miguel, , [amiga1, amiga2]] = array;
+
+// console.log(miguel, amiga1, amiga2);
+
+// destructuring an Object
+// console.log(restaurant.adress);
+
+// const { name, openingHours, mainMenu, adress } = restaurant;
+
+// console.log(name, openingHours, mainMenu, adress);
