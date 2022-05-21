@@ -32,7 +32,18 @@ const game = {
     ],
   ],
   score: '4:0',
-  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  scored: [
+    'Lewandowski',
+    'Gnarby',
+    'Lewandowski',
+    'Hummels',
+    'Gnarby',
+    'Gnarby',
+    'Muller',
+    'Muller',
+    'Muller',
+    'Muller',
+  ],
   date: 'Nov 9th, 2037',
   odds: {
     team1: 1.33,
@@ -72,5 +83,22 @@ avarege = avarege / odds.length;
 console.log(avarege);
 
 // 3.
-const teams = [game.team1, 'Draw', game.team2];
-const teamsAndOdds = [teams, teamsOdd];
+
+for (const [team, odd] of Object.entries(game.odds)) {
+  const teamString = team == 'x' ? 'Draw' : `victory ${game[team]}`;
+  console.log(`Odd of ${teamString}: ${odd}`);
+}
+
+// 4.
+
+const scores = {};
+
+for (const i in game.scored) {
+  if (!scores?.[game.scored[i]]) {
+    scores[game.scored[i]] = 1;
+  } else {
+    scores[game.scored[i]] += 1;
+  }
+}
+
+console.log(scores);
