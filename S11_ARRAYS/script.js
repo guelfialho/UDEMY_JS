@@ -81,6 +81,34 @@ const displayMovements = function (movements) {
 };
 
 displayMovements(account1.movements);
+
+const calDisplayBalance = function (movements) {
+  const balance = movements.reduce((acc, move) => acc + move, 0);
+  labelBalance.textContent = `${balance} EUR`;
+};
+
+calDisplayBalance(account1.movements);
+
+const createUsernames = function (accouts) {
+  accouts.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(element => element[0])
+      .join('');
+  });
+};
+createUsernames(accounts);
+console.log(accounts);
+
+// console.log(username);
+// console.log(username);
+// let finalUsername = [];
+// username.forEach(function (element) {
+//   finalUsername.push(element[0]);
+// });
+
+// console.log(finalUsername.join(''));
 /////////////////////////////////////////////////
 // LECTURES
 
@@ -93,6 +121,39 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+//
+
+// const balance = movements.reduce(function (acumulator, currentValue, index) {
+//   console.log(`Balance in interation ${index}: ${acumulator}`);
+//   return acumulator + currentValue;
+// }, 0);
+
+// const balance = movements.reduce((acum, curr) => acum + curr, 0);
+
+// console.log(balance);
+// console.log(movements);
+
+// const deposits = movements.filter(mov => mov > 0);
+// const withdrawals = movements.filter(mov => mov < 0);
+
+// console.log(deposits);
+// console.log(withdrawals);
+// console.log(movements);
+//
+//
+// const eurToUsd = 1.1;
+// const movementsUSD = movements.map(mov => mov * eurToUsd);
+// const movementsUSD = movements.map(function (mov) {
+//   return mov * eurToUsd;
+// });
+
+// console.log(movements);
+// console.log(movementsUSD);
+
+// const movementsUSDfor = [];
+// for (const mov of movements) movementsUSDfor.push(mov * eurToUsd);
+
+// console.log(movementsUSDfor);
 
 //////////////////////////////////////////
 // teoric classes
